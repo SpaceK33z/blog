@@ -36,7 +36,7 @@ body {
 }
 
 .top-bar-js-breakpoint {
-	width: 767px!important;
+	width: 930px!important;
 }
 
 #logo {
@@ -448,6 +448,12 @@ footer a {
 	list-style: none;
 }
 
+.blog .meta ul {
+	text-transform: uppercase;
+	font-size: 0.95em;
+	color: #000;
+}
+
 .blog .row-article {
 	 margin: 0 0 1.875rem 0;
 	 max-width: none;
@@ -469,6 +475,12 @@ footer a {
 
 .blog .single-post p:first-of-type {
 	font-size: 1.1rem!important;
+}
+
+@media only screen and (max-width: 48em) {
+	.blog .meta {
+		display: none;
+	}
 }
 
 /* Hacks */

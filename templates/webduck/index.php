@@ -9,11 +9,9 @@
     <title><?php echo($page_title); ?></title>
     <?php echo($page_meta); ?>
 
-    <link rel="stylesheet" href="templates/webduck/css/foundation.min.css">
-    <link rel="stylesheet" href="templates/webduck/css/animate.css">
-    <link rel="stylesheet" href="templates/webduck/css/custom.css">
-    <link rel="stylesheet" href="<?php echo($template_dir_url); ?>subdiv.css">
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<?php echo($template_dir_url); ?>css/foundation.min.css">
+    <link rel="stylesheet" href="<?php echo($template_dir_url); ?>css/animate.css">
+    <link rel="stylesheet" href="<?php echo($template_dir_url); ?>css/custom.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 
     <link rel="shortcut icon" href="img/favicon.ico">
@@ -23,8 +21,6 @@
     <script src="js/respond.min.js"></script>
 
     <meta name="author" content="Kees Kluskens">
-
-    <?php get_header(); ?>
 </head>
 <body class="geen-tabs blog">
 
@@ -71,8 +67,6 @@
 
 
             <?php echo($content); ?>
-
-            <?php get_footer(); ?>
         </div>
     </div>
 

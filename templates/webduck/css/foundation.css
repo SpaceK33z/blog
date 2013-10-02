@@ -1695,13 +1695,13 @@ small.error {
       font-size: 0.625em; }
 
 .top-bar-js-breakpoint {
-  width: 48em !important;
+  width: 58em !important;
   visibility: hidden; }
 
 .js-generated {
   display: block; }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 58em) {
   .top-bar {
     background: #111111;
     *zoom: 1;
