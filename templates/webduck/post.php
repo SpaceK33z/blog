@@ -12,7 +12,7 @@
             </ul>
         </div>
 
-        <div class="small-12 large-9 columns">
+        <div class="small-12 large-9 columns single-post">
             <h2><?php echo($post_title); ?></h2>
             <?php echo($post_content); ?>
 

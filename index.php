@@ -26,7 +26,7 @@ if (empty($_GET['filename'])) {
 } else if($_GET['filename'] == 'rss' || $_GET['filename'] == 'atom') {
     $filename = $_GET['filename'];
 }  else {
-    
+
     //Filename can be /some/blog/post-filename.md We should get the last part only
     $filename = explode('/',$_GET['filename']);
 
@@ -35,7 +35,7 @@ if (empty($_GET['filename'])) {
         $category = $filename[count($filename) - 1];
         $filename = null;
     } else {
-      
+
         // Individual Post
         $filename = POSTS_DIR . $filename[count($filename) - 1] . FILE_EXT;
     }
@@ -96,7 +96,7 @@ if ($filename==NULL) {
 
             // Get the post category.
             $post_category = $post['post_category'];
-            
+
             // Get the post category link.
             $post_category_link = $blog_url.'category/'.urlencode(trim(strtolower($post_category)));
 
@@ -124,7 +124,7 @@ if ($filename==NULL) {
             } else {
                 $post_image = get_twitter_profile_img($post_author_twitter);
             }
-            
+
             if ($post_status == 'draft') continue;
 
             // Get the milti-post template file.
@@ -331,10 +331,10 @@ else {
 
         // Get the post category.
         $post_category = str_replace(array("\n", '-'), '', $fcontents[4]);
-        
+
         // Get the post status.
         $post_status = str_replace(array("\n", '- '), '', $fcontents[5]);
-        
+
         // Get the post category link.
         $post_category_link = $blog_url.'category/'.urlencode(trim(strtolower($post_category)));
 
@@ -349,10 +349,10 @@ else {
         } else {
             $post_image = get_twitter_profile_img($post_author_twitter);
         }
-        
+
         // Get the post content
         $file_array = file($filename);
-        
+
         unset($file_array[0]);
         unset($file_array[1]);
         unset($file_array[2]);
@@ -360,9 +360,9 @@ else {
         unset($file_array[4]);
         unset($file_array[5]);
         unset($file_array[6]);
-        
+
         $post_content = Markdown(implode("", $file_array));
-                
+
         // Get the site title.
         $page_title = str_replace('# ', '', $fcontents[0]);
 
@@ -438,7 +438,7 @@ else {
     }
 
     $url .= $path;
-    
+
     // Check if the install directory is writable.
     $is_writable = (TRUE == is_writable(dirname(__FILE__) . '/'));
     ?>
@@ -457,10 +457,10 @@ else {
         <body class="dp-install">
             <form method="POST" action="./dropplets/save.php">
                 <a class="dp-icon-dropplets" href="http://dropplets.com" target="_blank"></a>
-                
+
                 <h2>Install Dropplets</h2>
                 <p>Welcome to an easier way to blog.</p>
-                
+
                 <input type="password" name="password" id="password" required placeholder="Choose Your Password">
                 <input type="password" name="password-confirmation" id="password-confirmation" required placeholder="Confirm Your Password" onblur="confirmPass()">
 
@@ -475,7 +475,7 @@ else {
 
     		    <button type="submit" name="submit" value="submit">k</button>
     		</form>
-                
+
             <?php if (!$is_writable) { ?>
                 <p style="color:red;">It seems that your config folder is not writable, please add the necessary permissions.</p>
             <?php } ?>
@@ -491,7 +491,7 @@ else {
             </script>
         </body>
     </html>
-<?php 
+<?php
 
 /*-----------------------------------------------------------------------------------*/
 /* That's All There is to It

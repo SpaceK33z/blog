@@ -50,6 +50,7 @@
                     </section>
                 </nav>
             </div>
+            <?php if($is_home) { ?>
             <div class="small-12 large-9 large-centered columns no-padding-for-small">
                 <div class="small-12 large-12 columns no-padding-for-small animated fadeInDown">
                     <div id="header-tekst">
@@ -61,13 +62,12 @@
                     </div>
                 </div>
             </div>
+            <?php } ?>
         </header>
 
 
         <div class="small-12 large-9 large-centered columns" id="main">
-            <?php if($is_home) { ?>
 
-            <?php } ?>
 
 
             <?php echo($content); ?>
