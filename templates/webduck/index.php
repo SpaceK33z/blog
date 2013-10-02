@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="<?php echo($template_dir_url); ?>css/custom.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="image_src" href="/img/logo_fb.png">
+    <link rel="shortcut icon" href="<?php echo($template_dir_url); ?>img/favicon.ico">
+    <link rel="image_src" href="<?php echo($template_dir_url); ?>img/logo_fb.png">
 
     <script src="js/vendor/custom.modernizr.js"></script>
     <script src="js/respond.min.js"></script>

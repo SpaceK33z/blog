@@ -54,9 +54,9 @@ body {
 }
 
 /* Typografie en links */
-#main p, footer p {
+p {
 	font-size: 1em;
-	margin-bottom: 1.875rem;
+
 }
 
 h2, h3 {
@@ -93,6 +93,15 @@ h2 a:hover, h3 a:hover {
 
 a {
 	outline: 0;
+}
+
+p, ul, ol, pre {
+	margin-bottom: 1.875rem;
+}
+
+code {
+	font-weight: normal;
+	color: #7f0a0c;
 }
 
 /* Formulier */
