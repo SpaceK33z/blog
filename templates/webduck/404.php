@@ -1,16 +1,13 @@
 <article class="single not-found">
     <div class="row">
-        <div class="one-quarter meta">
-            <div class="thumbnail">
-            </div>
-        </div>
-
-        <div class="three-quarters post">
-            <h1><?php echo($error_title); ?></h1>
-            <p><?php echo($error_text); ?></p>
+        <div class="small-12 large-9 columns">
+            <h1>Sorry, er is niks gevonden</h1>
+            <p>
+                Helaas konden we niks vinden in onze zoektocht naar de juiste pagina. Wil je misschien wat artikelen lezen?
+            </p>
 
             <ul class="actions">
-                <li><a class="button" href="<?php echo($blog_url); ?>">More Articles</a></li>
+                <li><a class="button" href="<?php echo($blog_url); ?>">Artikelen</a></li>
             </ul>
         </div>
     </div>

@@ -30,7 +30,7 @@ if (isset($_GET['action']))
                 // Redirect if authenticated.
                 header('Location: ' . './');
             } else {
-                
+
                 // Display error if not authenticated.
                 $login_error = 'Nope, try again!';
             }
@@ -44,16 +44,16 @@ if (isset($_GET['action']))
             // Redirect to dashboard on logout.
             header('Location: ' . './');
             break;
-        
+
         // Fogot password.
         case 'forgot':
-            
+
             // The verification file.
             $verification_file = "./verify.php";
-            
+
             // If verified, allow a password reset.
             if (!isset($_GET["verify"])) {
-            
+
                 $code = sha1(md5(rand()));
 
                 $verify_file_contents[] = "<?php";
@@ -69,8 +69,8 @@ if (isset($_GET['action']))
 
                 mail($blog_email, $blog_title . " - Recover your Dropplets Password", $message, implode("\r\n", $headers));
                 $login_error = "Details on how to recover your password have been sent to your email.";
-            
-            // If not verified, display a verification error.   
+
+            // If not verified, display a verification error.
             } else {
 
                 include($verification_file);
@@ -83,8 +83,8 @@ if (isset($_GET['action']))
                 }
             }
             break;
-        
-        // Invalidation            
+
+        // Invalidation
         case 'invalidate':
             if (!$_SESSION['user']) {
                 $login_error = 'Nope, try again!';
@@ -92,19 +92,19 @@ if (isset($_GET['action']))
                 if (!file_exists($upload_dir . 'cache/')) {
                     return;
                 }
-                
+
                 $files = glob($upload_dir . 'cache/*');
-                
+
                 foreach ($files as $file) {
                     if (is_file($file))
                         unlink($file);
                 }
             }
-            
+
             header('Location: ' . './');
             break;
     }
-    
+
 }
 
 define('LOGIN_ERROR', $login_error);
@@ -201,7 +201,7 @@ function get_pagination($page,$total) {
             $string .=  "<li style='display: inline-block; margin:5px;'><a class=\"button\" href=\"?page=".$i."\">".$i."</a></li>";
         }
     }
-    
+
     $string .= "</ul>";
     return $string;
 }
@@ -211,7 +211,7 @@ function get_pagination($page,$total) {
 /*-----------------------------------------------------------------------------------*/
 
 function get_installed_templates() {
-    
+
     // The currently active template.
     $active_template = ACTIVE_TEMPLATE;
 
@@ -220,7 +220,7 @@ function get_installed_templates() {
 
     // Get all templates in the templates directory.
     $available_templates = glob($templates_directory . '*');
-    
+
     foreach ($available_templates as $template):
 
         // Generate template names.
@@ -247,26 +247,26 @@ function get_installed_templates() {
 /*-----------------------------------------------------------------------------------*/
 
 function get_premium_templates($type = 'all', $target = 'blank') {
-    
+
     $templates = simplexml_load_file('http://dropplets.com/templates-'. $type .'.xml');
-    
+
     if($templates===FALSE) {
         // Feed not available.
     } else {
         foreach ($templates as $template):
-            
+
             // Define some variables
             $template_file_name=$template->file;
             $template_price=$template->price;
             $template_url=$template->url;
-            
+
             { ?>
             <li class="premium">
                 <img src="http://dropplets.com/demo/templates/<?php echo $template_file_name; ?>/screenshot.jpg">
-                <a class="buy" href="http://gum.co/dp-<?php echo $template_file_name; ?>" title="Purchase/Download"><?php echo $template_price; ?></a> 
-                <a class="preview" href="http://dropplets.com/demo/?template=<?php echo $template_file_name; ?>" title="Prview" target="_<?php echo $target; ?>">p</a>    
+                <a class="buy" href="http://gum.co/dp-<?php echo $template_file_name; ?>" title="Purchase/Download"><?php echo $template_price; ?></a>
+                <a class="preview" href="http://dropplets.com/demo/?template=<?php echo $template_file_name; ?>" title="Prview" target="_<?php echo $target; ?>">p</a>
             </li>
-            <?php } 
+            <?php }
         endforeach;
     }
 }
@@ -288,9 +288,9 @@ function count_premium_templates($type = 'all') {
 /* If is Home (Could use "is_single", "is_category" as well.)
 /*-----------------------------------------------------------------------------------*/
 
-$homepage = BLOG_URL;
+// $homepage = BLOG_URL;
 
-// Get the current page.    
+// Get the current page.
 $currentpage  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] : 'https://'.$_SERVER["SERVER_NAME"];
 $currentpage .= $_SERVER["REQUEST_URI"];
 
@@ -303,17 +303,17 @@ define('IS_HOME', $is_home);
 /*-----------------------------------------------------------------------------------*/
 
 function get_twitter_profile_img($username) {
-	
+
 	// Get the cached profile image.
 	$profile_image = './cache/'.$username.'.jpg';
-	
+
 	// Cache the image if it doesn't already exist.
 	if (!file_exists($profile_image)) {
 	    $image_url = 'http://dropplets.com/profiles/?id='.$username.'';
 	    $image = file_get_contents($image_url);
 	    file_put_contents('./cache/'.$username.'.jpg', $image);
 	}
-	
+
 	// Return the image URL.
 	return $profile_image;
 }
@@ -334,19 +334,19 @@ function get_header() { ?>
     <!-- RSS Feed Links -->
     <link rel="alternate" type="application/rss+xml" title="Subscribe using RSS" href="<?php echo BLOG_URL; ?>rss" />
     <link rel="alternate" type="application/atom+xml" title="Subscribe using Atom" href="<?php echo BLOG_URL; ?>atom" />
-    
+
     <!-- Dropplets Styles -->
     <link rel="stylesheet" href="<?php echo BLOG_URL; ?>dropplets/style/style.css">
     <link rel="shortcut icon" href="<?php echo BLOG_URL; ?>dropplets/style/images/favicon.png">
 
     <!-- User Header Injection -->
     <?php echo HEADER_INJECT; ?>
-    
+
     <!-- Plugin Header Injection -->
     <?php action::run('dp_header'); ?>
-<?php 
+<?php
 
-} 
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* Dropplets Footer
@@ -355,7 +355,7 @@ function get_header() { ?>
 function get_footer() { ?>
     <!-- jQuery & Required Scripts -->
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    
+
     <?php if (PAGINATION_ON_OFF !== "off") { ?>
     <!-- Post Pagination -->
     <script>
@@ -395,15 +395,15 @@ function get_footer() { ?>
         });
     </script>
     <?php } ?>
-    
+
     <!-- Dropplets Tools -->
     <?php include('./dropplets/tools.php'); ?>
-    
+
     <!-- User Footer Injection -->
     <?php echo FOOTER_INJECT; ?>
-    
+
     <!-- Plugin Footer Injection -->
     <?php action::run('dp_footer'); ?>
-<?php 
+<?php
 
 }

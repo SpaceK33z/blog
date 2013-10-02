@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="<?php echo($template_dir_url); ?>css/foundation.min.css">
     <link rel="stylesheet" href="<?php echo($template_dir_url); ?>css/animate.css">
     <link rel="stylesheet" href="<?php echo($template_dir_url); ?>css/custom.css">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 
     <link rel="shortcut icon" href="<?php echo($template_dir_url); ?>img/favicon.ico">
     <link rel="image_src" href="<?php echo($template_dir_url); ?>img/logo_fb.png">
@@ -39,7 +38,7 @@
                         <ul class="right">
                             <li><a href="index.php">Home</a></li>
                             <li><a href="about.php">Over mij</a></li>
-                            <li class="active"><a href="index.php">Blog</a></li>
+                            <li class="active"><a href="blog.php">Blog</a></li>
                             <li><a href="portfolio.php">Portfolio</a></li>
                             <li><a href="contact.php">Contact</a></li>
                         </ul>
@@ -52,8 +51,7 @@
                     <div id="header-tekst">
                         <h2>Blog</h2>
                         <p>
-                            WebDuck is een in 2012 begonnen bedrijf gefocust op web-<br>
-                            development, opgericht door Kees Kluskens.
+                            De blog van WebDuck gaat over responsive design en alles wat erbij komt kijken.<br>
                         </p>
                     </div>
                 </div>

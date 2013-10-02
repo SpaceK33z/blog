@@ -30,7 +30,7 @@ body {
 	font-size: 100%;
 }
 
-.top-bar {
+.top-bar, .top-bar .name {
 	height: 3.13em;
 	line-height: 3.13em;
 }
@@ -187,7 +187,7 @@ footer a {
 }
 
 
-/* Alleen voor mobiel */
+/* Alleen voor kleine schermen */
 @media only screen and (max-width: 47.94em) {
 	h2, h3 {
 		margin: 0.94em 0 0.94em 0;
@@ -255,7 +255,7 @@ footer a {
 }
 
 
-/* Alleen voor Desktop */
+/* Alleen voor grote schermen */
 @media only screen and (min-width: 48em) {
 	/* Sticky footer hack */
 	html, body {
@@ -400,10 +400,6 @@ footer a {
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
 	}
 
-	#tabs-list {
-
-	}
-
 	#tabs-list li {
 		float: left;
 		list-style: none;
@@ -418,9 +414,9 @@ footer a {
 		display: block;
 		text-align: center;
 		padding: 16px 0;
-		transition: color .5s ease-in-out;
 		-moz-transition: color .5s ease-in-out;
 		-webkit-transition: color .5s ease-in-out;
+		transition: color .5s ease-in-out;
 	}
 
 	#tabs-list li a:hover, #tabs-list li.active a {
@@ -446,6 +442,12 @@ footer a {
 		padding-top: 5px;
 	}
 
+}
+
+@media only screen and (max-width: 56.25em) {
+	.top-bar-section ul li {
+		margin: 15px 10px;
+	}
 }
 
 /* Blog */
