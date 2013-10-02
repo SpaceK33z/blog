@@ -1,0 +1,470 @@
+@font-face {
+    font-family: 'AllerLightRegular';
+    src: url('../font/aller_lt-webfont.eot');
+    src: url('../font/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/aller_lt-webfont.woff') format('woff'),
+        url('../font/aller_lt-webfont.ttf') format('truetype'),
+        url('../font/aller_lt-webfont.svg#AllerLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AllerRegular';
+    src: url('../font/aller_rg-webfont.eot');
+    src: url('../font/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/aller_rg-webfont.woff') format('woff'),
+        url('../font/aller_rg-webfont.ttf') format('truetype'),
+        url('../font/aller_rg-webfont.svg#AllerRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, button, input, select, textarea {
+	font-family: sans-serif;
+	color: #666;
+}
+
+body {
+	background: #feffff;
+	font-size: 100%;
+}
+
+.top-bar {
+	height: 50px;
+	line-height: 50px;
+}
+
+.top-bar-js-breakpoint {
+	width: 767px!important;
+}
+
+#logo {
+	background: url('../img/logo5.png') no-repeat;
+	width: 258px;
+	height: 50px;
+	margin: 0;
+	position: absolute;
+	left: -20px;
+}
+
+/* Header */
+#header-tekst {
+	margin-bottom: 1.875rem;
+}
+
+/* Typografie en links */
+#main p, footer p {
+	font-size: 1.1em;
+}
+
+h2, h3 {
+	font: 1.1875rem AllerRegular, sans-serif;
+	color: #0073AF;
+	margin: 0 0 1.875rem 0;
+}
+
+h2 a:hover, h3 a:hover {
+	text-decoration: none;
+}
+
+#diensten-lijst {
+    margin-top: 20px;
+}
+
+#diensten-lijst h3 {
+    font: 15px AllerRegular;
+    color: #000;
+    margin: 15px 0 0 0;
+}
+
+.geen-margin {
+	margin: 0;
+}
+
+.top-margin {
+	margin: 1.875rem 0 0.375em 0;
+}
+
+a {
+	outline: 0;
+}
+
+/* Formulier */
+form {
+	font-size: 1.09em;
+}
+
+textarea {
+	height: 160px;
+}
+
+button, .button {
+	box-shadow: none;
+	border: none;
+}
+
+button:hover, .button:hover {
+	text-decoration: none;
+}
+
+/* Afbeeldingen */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Links */
+a { color: #0080C3; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+/* Portfolio */
+.portfolio-max-text-width {
+	max-width: 300px;
+}
+
+.portfolio-pic {
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.portfolio-pic:hover {
+	-webkit-filter: sepia(50%);
+}
+
+.portfolio-link:active img {
+	-webkit-filter: sepia(0%);
+	-ms-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+
+/* Footer */
+footer {
+	background: #4d4d4d url('../img/footer_bg.png') repeat-x;
+	width: 100%;
+	height: 210px;
+	clear: both;
+	color: #fff;
+}
+
+footer h3 {
+	color: #fff;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.footer-container {
+	background: url('../img/footer_licht.jpg') 50% 11px no-repeat;
+	overflow: hidden;
+	padding-top: 40px;
+}
+
+.margin-for-footer {
+	margin-bottom: 1.875rem;
+}
+
+
+/* Alleen voor mobiel */
+@media only screen and (max-width: 767px) {
+	h2, h3 {
+		margin: 15px 0 15px 0;
+	}
+
+	.no-padding-for-small {
+		padding: 0;
+	}
+
+	.tab, #header-tekst {
+		background: #007FC2;
+		background-image: linear-gradient(bottom, #007FC2 18%, #14AAF7 80%);
+		background-image: -o-linear-gradient(bottom, #007FC2 18%, #14AAF7 80%);
+		background-image: -moz-linear-gradient(bottom, #007FC2 18%, #14AAF7 80%);
+		background-image: -webkit-linear-gradient(bottom, #007FC2 18%, #14AAF7 80%);
+		background-image: -ms-linear-gradient(bottom, #007FC2 18%, #14AAF7 80%);
+
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.18, #007FC2),
+			color-stop(0.8, #14AAF7)
+		);
+		color: #fff;
+		text-shadow: 1px 1px 3px #006091;
+		padding: 0.9375em;
+	}
+
+	.tab h2, #header-tekst h2 {
+		color: #fff;
+		margin: 10px 0 10px 0;
+	}
+
+	#tabs-list {
+		margin: 0;
+	}
+
+	#tabs-list li {
+		float: left;
+		list-style: none;
+		margin: 0;
+		width: 33.33%;
+	}
+
+	#tabs-list li a {
+		background: #0073AF;
+		color: #fff;
+		text-shadow: 1px 1px 3px #006091;
+		display: block;
+		text-align: center;
+		padding: 1.875rem 0;
+	}
+
+	#tabs-list li a:hover, #tabs-list li.active a {
+		background: #007FC2;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	#header-tekst {
+		width: 100%;
+		padding: 0.9375em 2.8125em;
+	}
+}
+
+
+/* Alleen voor Desktop */
+@media only screen and (min-width: 768px) {
+	/* Sticky footer hack */
+	html, body {
+		height: 100%;
+	}
+
+	#wrap {
+		min-height: 100%;
+		height: auto!important;
+		height: 100%;
+		margin-bottom: -210px;
+	}
+
+	#wrap > *:last-child {
+		padding-bottom: 210px;
+	}
+
+
+	body {
+		background: #feffff url('../img/body_bg.png') repeat-x;
+	}
+
+	body.geen-tabs {
+		background: #feffff url('../img/body_bg_no_tabs.png') repeat-x;
+	}
+
+	/* Header */
+	header {
+		background: url('../img/header_licht.jpg') 50% 50px no-repeat;
+		width: 100%;
+		height: 440px;
+	}
+
+	body.geen-tabs header {
+		height: 200px;
+	}
+
+	/* Top-bar */
+	.contain-to-grid .top-bar {
+		max-width: 75%;
+	}
+
+	.top-bar-section ul {
+		background: transparent;
+	}
+
+	.top-bar-section ul li {
+		margin: 15px 20px;
+	}
+
+	.top-bar-section ul li a {
+		font: 15px Georgia, Times, serif;
+		text-transform: lowercase;
+		padding-bottom: 5px;
+		border-bottom: 2px solid #000;
+		color: #b2b2b2;
+		transition: color .75s ease-in-out;
+		-moz-transition: color .75s ease-in-out;
+		-webkit-transition: color .75s ease-in-out;
+	}
+
+	.top-bar-section ul li a:hover {
+		color: #fff;
+		border-bottom: 2px solid #00a8ff;
+		text-decoration: none;
+	}
+
+	.top-bar-section li.active a {
+		color: #fff;
+	}
+
+	.top-bar-section li a:not(.button) {
+		padding: 0;
+		line-height: 1;
+		padding-bottom: 5px;
+	}
+
+	.top-bar-section ul li > a {
+		padding: 0;
+	}
+
+	/* Tabs en slider */
+	.tab, #header-tekst {
+		color: #fff;
+		font: 15px Georgia, Times, serif;
+		text-shadow: 1px 1px 3px #006091;
+		padding-top: 1.875rem;
+		height: 278px;
+	}
+
+	#header-tekst {
+		height: 150px;
+	}
+
+	.tab h2, #header-tekst h2 {
+		font: 25px AllerLightRegular, sans-serif;
+		color: #fff;
+	}
+
+	#header-tekst h2 {
+
+	}
+
+	.orbit-container {
+		background: transparent;
+	}
+
+	.orbit-slide-number {
+		display: none;
+	}
+
+	.orbit-container .orbit-prev, .orbit-container .orbit-next {
+		background-color: rgba(0, 115, 175, 0.6);
+		width: 40px;
+		height: 50px;
+	}
+
+	.orbit-container .orbit-next > span {
+		margin-left: -12px;
+	}
+
+
+	#slider {
+		background: #000;
+		max-width: 100%;
+		max-height: 234px;
+		padding: 0;
+		float: left;
+		background-clip: padding-box;
+		border: 8px solid rgba(255,255,255,.2);
+		border-radius: 3px;
+		box-shadow: 0 0 1px rgba(255,255,255,.8),
+			0 0 3px rgba(0,0,0,.4),
+			1px 1px 0 rgba(0,0,0,.8) inset,
+			-1px -1px 0 rgba(0,0,0,.8) inset;
+	}
+
+	#slider-img, #slider img {
+		max-width: 100%;
+		height: auto;
+		-webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+	}
+
+	#tabs-list {
+
+	}
+
+	#tabs-list li {
+		float: left;
+		list-style: none;
+		margin-top: 21px;
+	}
+
+	#tabs-list li a {
+		width: 160px;
+		height: 50px;
+		font: 17px AllerLightRegular, sans-serif;
+		color: #99C7DF;
+		display: block;
+		text-align: center;
+		padding: 16px 0;
+		transition: color .5s ease-in-out;
+		-moz-transition: color .5s ease-in-out;
+		-webkit-transition: color .5s ease-in-out;
+	}
+
+	#tabs-list li a:hover, #tabs-list li.active a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	#tabs-list li.active a {
+		background: url('../img/header_tab_active.jpg') no-repeat;
+	}
+
+	/* Footer */
+	#tweets a {
+		text-decoration: none;
+	}
+
+	#tweets a:hover {
+		text-decoration: underline;
+	}
+
+	#twitter_acc {
+		float: right;
+		padding-top: 5px;
+	}
+
+}
+
+/* Blog */
+.blog .meta .thumbnail {
+	margin-bottom: 1.875rem;
+}
+
+.blog .meta ul, .blog ul.actions {
+	list-style: none;
+}
+
+.blog .row-article {
+	 margin: 0 0 1.875rem 0;
+	 max-width: none;
+}
+
+.blog .post {
+	float: left!important;
+}
+
+.blog ul.actions li {
+	float: left;
+	margin-right: 1.875rem;
+}
+
+/* Hacks */
+.ir {
+	display: block;
+	border: 0;
+	text-indent: -999em;
+	overflow: hidden;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+}
