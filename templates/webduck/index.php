@@ -16,8 +16,8 @@
     <link rel="shortcut icon" href="<?php echo($template_dir_url); ?>img/favicon.ico">
     <link rel="image_src" href="<?php echo($template_dir_url); ?>img/logo_fb.png">
 
-    <script src="js/vendor/custom.modernizr.js"></script>
-    <script src="js/respond.min.js"></script>
+    <script src="<?php echo($template_dir_url); ?>js/vendor/custom.modernizr.js"></script>
+    <script src="<?php echo($template_dir_url); ?>js/respond.min.js"></script>
 
     <meta name="author" content="Kees Kluskens">
 </head>
@@ -81,7 +81,7 @@
                 <p>
                     WebDuck is ingeschreven in het handelsregister te Eindhoven onder 543 78435.
                 </p>
-                <p>
+                <p class="geen-margin">
                     &copy; WebDuck.
                 </p>
             </div>
@@ -95,11 +95,11 @@
         </div>
     </footer>
 
-    <script src="js/vendor/jquery.min.js"></script>
+    <script src="<?php echo($template_dir_url); ?>js/vendor/jquery.min.js"></script>
 
-    <script src="js/foundation.min.js"></script>
+    <script src="<?php echo($template_dir_url); ?>js/foundation.min.js"></script>
 
-    <script src="js/script.js"></script>
+    <script src="<?php echo($template_dir_url); ?>js/script.js"></script>
 
     <!--[if lt IE 7 ]>
         <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
