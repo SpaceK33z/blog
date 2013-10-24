@@ -36,11 +36,11 @@
 
                     <section class="top-bar-section">
                         <ul class="right">
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="about.php">Over mij</a></li>
-                            <li class="active"><a href="blog.php">Blog</a></li>
-                            <li><a href="portfolio.php">Portfolio</a></li>
-                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="http://webduck.nl/index.php">Home</a></li>
+                            <li><a href="http://webduck.nl/about.php">Over mij</a></li>
+                            <li class="active"><a href="http://webduck.nl/blog">Blog</a></li>
+                            <li><a href="http://webduck.nl/portfolio.php">Portfolio</a></li>
+                            <li><a href="http://webduck.nl/contact.php">Contact</a></li>
                         </ul>
                     </section>
                 </nav>

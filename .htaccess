@@ -7,4 +7,4 @@ RewriteEngine on
 RewriteBase /
 RewriteCond %{REQUEST_URI} !blog\.php
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ blog.php?filename=$1 [NC,QSA,L]
+RewriteRule ^(.*)$ index.php?filename=$1 [NC,QSA,L]
